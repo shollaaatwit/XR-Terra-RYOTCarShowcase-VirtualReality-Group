@@ -8,42 +8,52 @@ public class ColorController : MonoBehaviour
     public GameObject car;
     public GameObject[] materials;
 
+    public Color black;
+    public Color gray;
+    public Color white;
+    public Color red;
+    public Color blue;
+    public Color green;
+    public Color orange;
+    public Color purple;
+    public Color lime;
+
+
     public void ChangeToBlack()
     {
-        Debug.Log("We trying to chnage to black");
-        ChangeColor(Color.black);
+        ChangeColor(black);
     }
     public void ChangeToGray()
     {
-        ChangeColor(Color.gray);
+        ChangeColor(gray);
     }
     public void ChangeToWhite()
     {
-        ChangeColor(Color.white);
+        ChangeColor(white);
     }
     public void ChangeToRed()
     {
-        ChangeColor(Color.red);
+        ChangeColor(red);
     }
     public void ChangeToBlue()
     {
-        ChangeColor(Color.blue);
+        ChangeColor(blue);
     }
     public void ChangeToGreen()
     {
-        ChangeColor(Color.green);
+        ChangeColor(green);
     }
     public void ChangeToOrange()
     {
-        ChangeColor(255, 159, 0);
+        ChangeColor(orange);
     }
     public void ChangeToPurple()
     {
-        ChangeColor(107, 0 , 170);
+        ChangeColor(purple);
     }
     public void ChangeToLime()
     {
-        ChangeColor(42, 212, 29);
+        ChangeColor(lime);
     }
 
     private void ChangeColor(Color matColor)
@@ -53,15 +63,6 @@ public class ColorController : MonoBehaviour
         {
             materials[i].GetComponent<Renderer>().sharedMaterial.SetColor("_Color", matColor);
         } 
-
-    }
-    private void ChangeColor(float r, float g, float b)
-    {
-
-        for (int i = 0; i < materials.Length; i++)
-        {
-            materials[i].GetComponent<Renderer>().sharedMaterial.color = new Color(r, g, b, 1);
-        }
 
     }
 

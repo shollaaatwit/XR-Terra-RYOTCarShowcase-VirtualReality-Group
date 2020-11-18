@@ -6,7 +6,9 @@ public class LightingController : MonoBehaviour
 {
 
     public Light myLight; 
-    public Light spotlight;
+    public Light spotlight1;
+    public Light spotlight2;
+    public Light spotlight3;
 
     public static Material matOne;
     public static Material matTwo;
@@ -18,7 +20,7 @@ public class LightingController : MonoBehaviour
 
     private void Start()
     {
- 
+        ChangeSpotLight(1);
     }
 
     public Material[] skyboxes = new Material[] {matOne, matTwo, matThree}; // holds array of skybox materials
@@ -31,6 +33,8 @@ public class LightingController : MonoBehaviour
     }
     public void ChangeSpotLight(float input)
     {
-        spotlight.intensity = Mathf.PingPong(Time.time, input);
+        spotlight1.intensity = input;
+        spotlight2.intensity = input;
+        spotlight3.intensity = input;
     }
 }
