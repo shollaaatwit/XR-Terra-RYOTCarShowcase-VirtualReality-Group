@@ -21,13 +21,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lamp
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
+  m_Shader: {fileID: 4800000, guid: 02f9653e969ec11459c0ebb367b07cb8, type: 3}
   m_ShaderKeywords: _EMISSIVE_COLOR_MAP _MASKMAP _MATERIAL_FEATURE_SPECULAR_COLOR
     _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
   - DistortionVectors
@@ -38,6 +38,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AO:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: cf948cba4eb8d7442b5c33e362d4cb96, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -59,6 +67,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CoatMaskMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -90,6 +102,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 7330ad258b8d7be469bf767acdde3db7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Height:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _HeightMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -110,8 +126,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: 3fd291d5d25ab904cb2d074c1ba0a513, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Metallic:
+        m_Texture: {fileID: 2800000, guid: 59a23f1b0969a1845b7a8e5dbebbcde9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: bca7d3717d65295409b2b03ba5c770c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -127,6 +151,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Smoothness:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -155,6 +183,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TransmittanceColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -205,6 +237,7 @@ Material:
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 1
     - _DstBlend: 0
+    - _EdgeLength: 15
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 1
     - _EmissiveIntensity: 1000000
@@ -219,6 +252,7 @@ Material:
     - _HdrpVersion: 2
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
+    - _HeightDisplacement: 0
     - _HeightMapParametrization: 0
     - _HeightMax: 1
     - _HeightMin: -1
@@ -233,9 +267,10 @@ Material:
     - _LinkDetailsWithBase: 0
     - _MaterialID: 4
     - _Metallic: 0
+    - _MetallicStrength: 0
     - _Mode: 0
     - _NormalMapSpace: 0
-    - _NormalScale: 1
+    - _NormalScale: 1.17
     - _OcclusionStrength: 1
     - _PPDLodThreshold: 5
     - _PPDMaxSamples: 15
@@ -249,6 +284,7 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
+    - _SmoothnessStrength: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularAAScreenSpaceVariance: 0.1
     - _SpecularAAThreshold: 0.2
@@ -271,6 +307,7 @@ Material:
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
     - _Thickness: 1
+    - _Tile: 1
     - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
@@ -290,10 +327,12 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
+    - __dirty: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorTint: {r: 1, g: 1, b: 1, a: 0}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
